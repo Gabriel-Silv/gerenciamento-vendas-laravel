@@ -17,9 +17,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('vendas', VendasController::class);
+//Route::resource('vendas', VendasController::class);
 
-Route::post('/vendas/criar', [VendasController::class, 'store'])->name('vendas.store');
-Route::get('/vendas/listar', [VendasController::class, 'show'])->name('vendas.show');
-Route::put('/vendas/alterar', [VendasController::class, 'update'])->name('vendas.update');
-Route::delete('/vendas/deletar', [VendasController::class, 'destroy'])->name('vendas.destroy');
+
+Route::prefix('/vendas')->name('vendas.')->group(function() {
+    Route::post('/criar', [VendasController::class, 'store'])->name('vendas.store');
+    Route::get('/listar', [VendasController::class, 'show'])->name('vendas.show');
+    Route::put('/alterar', [VendasController::class, 'update'])->name('vendas.update');
+    Route::delete('/deletar', [VendasController::class, 'destroy'])->name('vendas.destroy'); 
+    Route::get('/buscar/{vehicleType}', 'VendasController@find')->name('find')->where('vehicleType', '[0-9]+');
+});
