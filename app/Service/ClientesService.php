@@ -1,5 +1,6 @@
 <?php
 
+
 namespace App\Services;
 
 use App\Models\Clientes;
@@ -34,3 +35,7 @@ class ClientesService
         return $this->clienteModel->all();
      }
 }
+
+
+
+
