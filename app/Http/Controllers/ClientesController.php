@@ -3,15 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Services\ClientesService;
+use Illuminate\Support\Facades\Response;
 class ClientesController extends Controller
 {
+
+    protected $service;
+    public function __construct(ClientesService $service){
+        $this->service = $service;
+    }
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $data = $this->service->getAll();
+        return view('admin.pages.clientes.index',compact('data'));
     }
 
     /**
@@ -19,7 +27,7 @@ class ClientesController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
