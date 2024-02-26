@@ -3,17 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Services\VendasService;
+
 
 class VendasController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
+    protected $vendasService;
+    public function __construct(VendasService  $vendasService) {
+        $this->vendasService = $vendasService;
+    }
     public function index()
     {
-        die('Hello');
-
-        return;
+        $data = $this->vendasService->getAll();
+        $data=response()->json($data);
+        return view('vendas.index',compact('data'));
     }
 
     /**
@@ -21,7 +27,8 @@ class VendasController extends Controller
      */
     public function create()
     {
-        die('create');
+        $data = $this->vendasService->create($request->all());
+        return  response()->json($data);
     }
 
     /**
@@ -35,25 +42,20 @@ class VendasController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show()
     {
-        die('show');
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        die('Edit');
+        $data = $this->vendasService->getAll();
+        return  response()->json($data);
+        //return view('vendas.index',compact('data'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request)
     {
-        die('update');
+        $data = $this->vendasService->update($request->id,$request->all());
+        return  response()->json($data);
     }
 
     /**
@@ -61,6 +63,7 @@ class VendasController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $data = $this->vendasService->delete($id);
+        return  response()->json($data);
     }
 }

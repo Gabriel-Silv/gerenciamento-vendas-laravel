@@ -4,6 +4,7 @@
 namespace App\Services;
 
 use App\Models\Clientes;
+use App\Repositories\ClienteRepository;
 
 class ClientesService
 {
@@ -21,6 +22,7 @@ class ClientesService
     public function getById($id)
     {
         // Implemente a lógica para obter um cliente por ID
+        return $this->clienteModel->find($id);
     }
     public function update($id, $data)
     {
@@ -35,7 +37,4 @@ class ClientesService
         return $this->clienteModel->all();
      }
 }
-
-
-
 

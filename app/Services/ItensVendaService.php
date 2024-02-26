@@ -2,7 +2,8 @@
 
 namespace App\Service;
 
-class EnderecoService 
+
+class ItensVendaService 
 {
 
 }
