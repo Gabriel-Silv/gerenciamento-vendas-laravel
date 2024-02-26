@@ -45,8 +45,10 @@ class VendasController extends Controller
     public function show()
     {
         $data = $this->vendasService->getAll();
-        return  response()->json($data);
-        //return view('vendas.index',compact('data'));
+        //var_dump($data);
+        //die('Aqui');
+        //return  response()->json($data);
+        return view('vendas.index',compact('data'));
     }
 
     /**
