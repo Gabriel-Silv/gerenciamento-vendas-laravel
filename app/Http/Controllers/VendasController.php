@@ -44,9 +44,11 @@ class VendasController extends Controller
      */
     public function show()
     {
-        $data = $this->vendasService->getAll();
-        //var_dump($data);
-        //die('Aqui');
+        //$data = $this->vendasService->getAll();
+        //$data = $this->getVendasJson();
+        $data = $this->vendasService->getVendasAll();
+        var_dump($data);
+        die('Aqui');
         //return  response()->json($data);
         return view('vendas.index',compact('data'));
     }
@@ -67,5 +69,18 @@ class VendasController extends Controller
     {
         $data = $this->vendasService->delete($id);
         return  response()->json($data);
+    }
+
+    public function getVendasJson(){
+        $filePath = base_path('tests/vendas.json');
+
+        if (!file_exists($filePath)) {
+            
+            return response()->json(['error' => 'Arquivo vendas.json não encontrado.'], 404);
+        }
+
+        $json = file_get_contents($filePath);
+        $data = json_decode($json, true);
+        return $data;
     }
 }

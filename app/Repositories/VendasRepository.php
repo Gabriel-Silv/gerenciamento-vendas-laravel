@@ -7,5 +7,9 @@ use Illuminate\Support\Facades\Log;
 
 class VendasRepository  
 {
-  
+    public function getVendasAll()
+    {
+        //$vendas = Vendas::with('produtos')->get();
+        $vendas = Vendas::all();
+    } 
 }

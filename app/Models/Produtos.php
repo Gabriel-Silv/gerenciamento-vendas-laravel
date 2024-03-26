@@ -11,7 +11,7 @@ class Produtos extends Model
 
     public function venda()
     {
-        return $this->belongsTo(Venda::class);
+        return $this->belongsTo(Vendas::class);
     }
 }
 

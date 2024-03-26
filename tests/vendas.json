@@ -1,0 +1,134 @@
+{
+    "vendas": [
+       {
+         "data": "2023-04-01",
+         "id_venda": 1,
+         "valor_total": 1500.00,
+         "id_cliente": 1,
+         "nome_cliente": "João Silva",
+         "vendedor": "Carlos Pereira",
+         "itens_vendas": [
+           {
+             "id": 1,
+             "quantidade": 2,
+             "valor_unit": 100.00,
+             "descricao_produto": "Mouse Gamer",
+             "id_venda": 1
+           },
+           {
+             "id": 2,
+             "quantidade": 1,
+             "valor_unit": 200.00,
+             "descricao_produto": "Teclado Mecânico",
+             "id_venda": 1
+           },
+           {
+             "id": 3,
+             "quantidade": 1,
+             "valor_unit": 300.00,
+             "descricao_produto": "Monitor 24'",
+             "id_venda": 1
+           },
+           {
+             "id": 4,
+             "quantidade": 1,
+             "valor_unit": 400.00,
+             "descricao_produto": "Gabinete de Computador",
+             "id_venda": 1
+           },
+           {
+             "id": 5,
+             "quantidade": 1,
+             "valor_unit": 500.00,
+             "descricao_produto": "Placa de Vídeo",
+             "id_venda": 1
+           }
+         ]
+       },
+
+       {
+         "data": "2023-04-02",
+         "id_venda": 2,
+         "valor_total": 2000.00,
+         "id_cliente": 2,
+         "nome_cliente": "Maria Santos",
+         "vendedor": "Ana Costa",
+         "itens_vendas": [
+           {
+             "id": 6,
+             "quantidade": 1,
+             "valor_unit": 250.00,
+             "descricao_produto": "SSD 256GB",
+             "id_venda": 2
+           },
+           {
+             "id": 7,
+             "quantidade": 2,
+             "valor_unit": 150.00,
+             "descricao_produto": "Memória RAM 8GB",
+             "id_venda": 2
+           },
+           {
+             "id": 8,
+             "quantidade": 1,
+             "valor_unit": 350.00,
+             "descricao_produto": "Processador Intel i5",
+             "id_venda": 2
+           },
+           {
+             "id": 9,
+             "quantidade": 1,
+             "valor_unit": 450.00,
+             "descricao_produto": "Fonte de Alimentação",
+             "id_venda": 2
+           },
+           {
+             "id": 10,
+             "quantidade": 1,
+             "valor_unit": 550.00,
+             "descricao_produto": "Cooler de CPU",
+             "id_venda": 2
+           }
+         ]
+       },
+
+       {
+         "data": "2023-04-03",
+         "id_venda": 3,
+         "valor_total": 2500.00,
+         "id_cliente": 3,
+         "nome_cliente": "Pedro Ferreira",
+         "vendedor": "Ricardo Oliveira",
+         "itens_vendas": [
+           {
+             "id": 11,
+             "quantidade": 1,
+             "valor_unit": 300.00,
+             "descricao_produto": "Monitor 27'",
+             "id_venda": 3
+           },
+           {
+             "id": 12,
+             "quantidade": 2,
+             "valor_unit": 100.00,
+             "descricao_produto": "Mouse Gamer",
+             "id_venda": 3
+           },
+           {
+             "id": 13,
+             "quantidade": 1,
+             "valor_unit": 200.00,
+             "descricao_produto": "Teclado Mecânico",
+             "id_venda": 3
+           },
+           {
+            "id": 13,
+            "quantidade": 1,
+            "valor_unit": 200.00,
+            "descricao_produto": "Teclado Mecânico",
+            "id_venda": 3
+          }]
+
+        }
+    ]
+  }

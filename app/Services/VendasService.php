@@ -9,10 +9,12 @@ use App\Repositories\VendasRepository;
 class VendasService
 {
     protected $vendasModel;
+    protected $vendasRepository;
 
-    public function __construct(Vendas $vendasModel)
+    public function __construct(Vendas $vendasModel, VendasRepository $vendasRepository)
     {
         $this->vendasModel = $vendasModel;
+        $this->vendasRepository = $vendasRepository;
     }
 
     public function create($data)
@@ -33,7 +35,13 @@ class VendasService
     {
         return $this->vendasModel->delete($id);
     }
-     public function getAll(){
+    public function getAll(){
         return $this->vendasModel->all();
-     }
+    }
+
+    public function getVendasAll()
+    {
+        return $this->vendasModel->all();
+        //return $this->vendasRepository->getVendasAll();
+    }
 }
